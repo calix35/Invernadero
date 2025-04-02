@@ -125,5 +125,3 @@ void testComponentes();
 #ifdef __cplusplus
 }
 #endif
-
-#endif
