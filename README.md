@@ -165,15 +165,22 @@ int main() {
 
 ---
 
-## Compilación
+### 📚 Documentación de la Librería
 
-### En Linux/macOS:
+La documentación técnica de la librería `invernadero` está disponible en el siguiente enlace:
+
+**[https://tucuenta.github.io/tu-repo/](https://tucuenta.github.io/tu-repo/)**
+
+(Modifica este enlace según tu repositorio real)
+
+
+### Compilación en Linux/macOS:
 
 ```bash
 gcc main.c invernadero.c -o invernadero
 ```
 
-### En Windows (con MinGW):
+### Compilación en Windows (con MinGW):
 
 ```bash
 gcc main.c invernadero.c -o invernadero.exe
@@ -300,15 +307,6 @@ Este proyecto se realizará en **equipo**. Cada equipo deberá entregar los sigu
 - **5. (Opcional) Evidencia visual**
   - Capturas de pantalla o fotografías del programa funcionando
 
-
-
-## 📚 Documentación de la Librería
-
-La documentación técnica de la librería `invernadero` está disponible en el siguiente enlace:
-
-**[https://tucuenta.github.io/tu-repo/](https://tucuenta.github.io/tu-repo/)**
-
-(Modifica este enlace según tu repositorio real)
 
 
 ## Créditos
