@@ -2,7 +2,8 @@
 
 PROJECT_NAME           = "Librería Invernadero"
 PROJECT_BRIEF          = "Control de Invernadero Automatizado con Arduino y C"
-OUTPUT_DIRECTORY       = docs
+OUTPUT_DIRECTORY       = .
+HTML_OUTPUT            = docs
 GENERATE_HTML          = YES
 GENERATE_LATEX         = NO
 INPUT                  = invernadero.h
