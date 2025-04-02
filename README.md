@@ -248,7 +248,6 @@ La documentación técnica de la librería `invernadero` está disponible en el 
 
 **[https://calix35.github.io/Invernadero/](https://calix35.github.io/Invernadero/)**
 
-(Modifica este enlace según tu repositorio real)
 
 ---
 
