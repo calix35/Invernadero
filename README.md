@@ -165,6 +165,45 @@ int main() {
 
 ---
 
+### Uso con Versión Real o Simulada
+
+Esta librería (`invernadero.h`) puede ser utilizada con dos implementaciones distintas:
+
+- `invernadero.c` – Versión real que se comunica con el Arduino por puerto serial.
+- `invernadero_simulado.c` – Versión simulada que permite probar el programa sin hardware.
+
+El archivo `.h` es común para ambas versiones, por lo que los alumnos **no deben modificarlo** ni cambiar el `#include`.
+
+### Compilación:
+
+Para compilar con la versión real en Linux/macOS:
+
+```bash
+gcc main.c invernadero.c -o invernadero
+```
+
+Para compilar con la versión simulada en Linux/macOS:
+
+```bash
+gcc main.c invernadero_simulado.c -o invernadero_simulado
+```
+
+Para compilar con la versión real en Windows (con MinGW):
+
+```bash
+gcc main.c invernadero.c -o invernadero.exe
+```
+
+Para compilar con la versión simulada en Windows (con MinGW):
+
+```bash
+gcc main.c invernadero_simulado.c -o invernadero_simulado.exe
+```
+
+Esto permite desarrollar y depurar sin necesidad del invernadero físico, y simplemente cambiar el `.c` al compilar para pruebas o entrega final.
+
+---
+
 ### 📚 Documentación de la Librería
 
 La documentación técnica de la librería `invernadero` está disponible en el siguiente enlace:
@@ -172,19 +211,6 @@ La documentación técnica de la librería `invernadero` está disponible en el 
 **[https://tucuenta.github.io/tu-repo/](https://tucuenta.github.io/tu-repo/)**
 
 (Modifica este enlace según tu repositorio real)
-
-
-### Compilación en Linux/macOS:
-
-```bash
-gcc main.c invernadero.c -o invernadero
-```
-
-### Compilación en Windows (con MinGW):
-
-```bash
-gcc main.c invernadero.c -o invernadero.exe
-```
 
 ---
 
