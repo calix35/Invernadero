@@ -3,9 +3,20 @@
 ### Materia: Programación Estructurada  
 #### Docente: Dr. Alan Díaz Manríquez
 
- Control de Invernadero Automatizado
+# 🌿 Control de Invernadero Automatizado
 
-Este proyecto consiste en controlar un invernadero automatizado desde un programa en C, utilizando un Arduino como sistema embebido conectado por puerto serial. Los alumnos deben implementar un sistema con distintos modos de operación y demostrar el uso de estructuras fundamentales de programación: condicionales, ciclos, funciones, arreglos y matrices.
+En la Facultad de Ingeniería y Ciencias (FIC), surge la necesidad de contar con un sistema que permita monitorear y automatizar las condiciones de cultivo dentro de un invernadero a pequeña escala. La automatización en este tipo de entornos permite mantener condiciones óptimas de temperatura, humedad, y luz, lo cual es esencial para el crecimiento saludable de las plantas.
+
+Con este contexto, se solicitó a los alumnos de la materia de **Programación Estructurada** el desarrollo de un **prototipo de invernadero automatizado**, que pudiera ser controlado desde un programa en lenguaje C, utilizando un sistema embebido basado en Arduino. 
+
+Este proyecto tiene como propósito integrar y aplicar los conocimientos clave adquiridos durante el curso, tales como:
+
+- Uso de estructuras condicionales y de repetición
+- Modularidad mediante funciones
+- Manejo de arreglos y matrices
+- Comunicación con dispositivos externos
+
+Cada equipo es responsable de desarrollar el software de control que se conectará al invernadero físico, permitiendo la gestión automática o manual de las condiciones internas del sistema.
 
 ---
 
@@ -45,9 +56,36 @@ El programa en C debe implementar un **menú principal** con los siguientes modo
 
 ### 1. Modo Automático
 
-- El sistema lee continuamente temperatura y humedad reales desde el sensor.
-- Según la lógica que el alumno defina, decide automáticamente cuándo activar la bomba o el ventilador.
-- El usuario puede ver en pantalla las condiciones actuales y los actuadores activos.
+En este modo, el sistema lee continuamente la temperatura y la humedad desde el sensor, y toma decisiones automáticas según la siguiente lógica:
+
+#### 🌡️ Lógica de temperatura
+- Si la **temperatura ≥ 30°C** → **Encender ventilador**
+- Si la **temperatura < 28°C** → **Apagar ventilador**
+
+#### 💧 Lógica de humedad
+- Si la **humedad ≤ 40%** → **Encender bomba de agua**
+- Si la **humedad ≥ 60%** → **Apagar bomba de agua**
+
+#### 🔄 Condición combinada
+- Si la **temperatura ≥ 30°C** **y** la **humedad ≤ 40%**:
+  - Encender **ventilador y bomba**
+  - Encender **LED rojo** indicando ambiente crítico
+
+#### 💡 LED como semáforo ambiental
+- Si **temperatura < 30°C** y **humedad entre 40% y 60%** → **LED verde** (ambiente ideal)
+- Si **solo una** condición está fuera de rango → **LED amarillo**
+- Si **ambas** condiciones están fuera de rango → **LED rojo**
+
+#### 📌 Nota importante: histeresis
+Para evitar que los actuadores cambien constantemente con cada pequeña variación en la lectura del sensor, se utiliza una lógica de **histeresis**:
+
+- La bomba **solo se enciende** si la humedad baja a **40% o menos**
+- La bomba **solo se apaga** si la humedad sube a **60% o más**
+- En el rango entre 41% y 59%, **la bomba mantiene su estado anterior**
+
+Esto significa que, por ejemplo, si la humedad está en 50%, **la bomba no cambia su estado actual**: se mantiene encendida o apagada según cómo estaba antes.
+
+---
 
 **Submenú sugerido:**
 
@@ -231,22 +269,6 @@ El programa será evaluado con base en:
   - Arreglo circular en historial de comandos
 - Interacción clara por consola
 - Creatividad y estructura
-
----
-
----
-
----
-
-
----
-
-
----
-
-
----
-
 
 ---
 
