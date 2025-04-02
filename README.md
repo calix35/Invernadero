@@ -224,7 +224,7 @@ El programa será evaluado con base en:
 
 ---
 
-## 🗓️ Cronograma de Exposición de Proyectos
+### 🗓️ Cronograma de Exposición de Proyectos
 
 Las exposiciones se llevarán a cabo de manera **presencial** con la computadora de cada equipo conectada al **invernadero físico**.
 
@@ -243,13 +243,13 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 (La tabla será actualizada posteriormente con los nombres de los equipos y fechas exactas)
 
 
-## 🧪 Presentación del Proyecto
+### 🧪 Presentación del Proyecto
 
 Cada equipo deberá exponer su proyecto de forma **presencial**, utilizando su propia computadora conectada al **invernadero físico**.  
 Durante la presentación se deberá demostrar el funcionamiento completo del sistema, incluyendo todos los modos implementados.
 
 
-## ✅ Evaluación del Proyecto
+### ✅ Evaluación del Proyecto
 
 > **Nota importante:** Aunque el proyecto se trabaja en equipo, la **evaluación será individual**.  
 > Cada alumno deberá demostrar de manera clara su comprensión del funcionamiento del proyecto  
