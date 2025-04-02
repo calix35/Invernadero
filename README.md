@@ -314,6 +314,7 @@ Durante la presentación se deberá demostrar el funcionamiento completo del sis
 | Explica y demuestra el modo macro                | 10     |
 | Explica cómo funciona el historial de comandos   | 10     |
 | Presenta el código `main.c` correctamente        | 10     |
+| Total        | 100     |
 
 > **El reporte en PDF es requisito obligatorio para calificar**, pero no tiene ponderación directa.  
 > Si no se entrega, no se podrá evaluar el proyecto.
