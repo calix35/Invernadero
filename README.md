@@ -33,7 +33,7 @@ Cada equipo es responsable de desarrollar el software de control que se conectar
 - [Compilación](#compilación)
 - [Comunicación Serial](#comunicación-serial)
 - [Evaluación](#evaluación)
-- [Archivos Entregables](#archivos-entregables)
+- [Archivos Entregables](#-archivos-entregables)
 - [Créditos](#créditos)
 
 ---
