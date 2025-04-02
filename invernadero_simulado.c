@@ -1,5 +1,6 @@
-include "invernadero.h"
+#include "invernadero.h"
 #include <string.h>
+#include <stdio.h>
 
 static float tempSimulada = 25.0;
 static float humSimulada = 50.0;

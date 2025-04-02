@@ -1,4 +1,4 @@
-ifndef INVERNADERO_H
+#ifndef INVERNADERO_H
 #define INVERNADERO_H
 
 /**
@@ -124,4 +124,6 @@ void testComponentes();
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
