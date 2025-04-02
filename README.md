@@ -148,7 +148,7 @@ Se proporciona una librería en ANSI C (`invernadero.h` y `invernadero.c`) que e
 #include <stdio.h>
 
 int main() {
-    if (abrirPuertoSerie("/dev/ttyUSB0") < 0) {
+    if (abrirPuertoSerie("COM3") < 0) {
         printf("No se pudo abrir el puerto.\n");
         return 1;
     }
