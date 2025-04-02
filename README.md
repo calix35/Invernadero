@@ -246,7 +246,7 @@ Esto permite desarrollar y depurar sin necesidad del invernadero físico, y simp
 
 La documentación técnica de la librería `invernadero` está disponible en el siguiente enlace:
 
-**[https://tucuenta.github.io/tu-repo/](https://tucuenta.github.io/tu-repo/)**
+**[https://calix35.github.io/Invernadero/](https://calix35.github.io/Invernadero/)**
 
 (Modifica este enlace según tu repositorio real)
 
