@@ -69,12 +69,11 @@ En este modo, el sistema lee continuamente la temperatura y la humedad desde el 
 #### 🔄 Condición combinada
 - Si la **temperatura ≥ 30°C** **y** la **humedad ≤ 40%**:
   - Encender **ventilador y bomba**
-  - Encender **LED rojo** indicando ambiente crítico
 
 #### 💡 LED como semáforo ambiental
-- Si **temperatura < 30°C** y **humedad entre 40% y 60%** → **LED verde** (ambiente ideal)
+- Si **temperatura < 30°C** y **humedad > 40%** → **LED verde** (ambiente ideal)
 - Si **solo una** condición está fuera de rango → **LED amarillo**
-- Si **ambas** condiciones están fuera de rango → **LED rojo**
+- Si **ambas** condiciones están fuera de rango → **LED rojo** (ambiente crítico)
 
 #### 📌 Nota importante: histeresis
 Para evitar que los actuadores cambien constantemente con cada pequeña variación en la lectura del sensor, se utiliza una lógica de **histeresis**:
