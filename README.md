@@ -275,9 +275,12 @@ El programa será evaluado con base en:
 Las exposiciones se llevarán a cabo de manera **presencial** con la computadora de cada equipo conectada al **invernadero físico**.
 
 > **Lugar:** Por definir
-> **Fecha y hora de entrega:** 11/05/2025 20:00 horas
+
+> **Fecha y hora de entrega:** 10/05/2025 20:00 horas
+
 > El archivo `main.c` y el reporte (PDF) deberá ser entregado via Teams (cada alumno deberá subir su propio proyecto, sin importar que su compañero de equipo ya lo haya entregado)
-> **Es requisito para entrega que su código compile**
+
+> 📌 **Es requisito para entrega que su código compile**
 
 
 ### Fechas y horarios de presentación:
@@ -289,7 +292,8 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Nombre 1, Nombre 2, ...)              |
 
 
-(La tabla será actualizada posteriormente con los nombres de los equipos y fechas exactas)
+(La tabla será actualizada el día 11/05/2025 con los nombres de los alumnos y fechas exactas de presentación, **es responsabilidad del alumno estar pendiente de la
+fecha y hora que le corresponde**)
 
 
 ### 🧪 Presentación del Proyecto
