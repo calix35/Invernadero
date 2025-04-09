@@ -275,6 +275,9 @@ El programa será evaluado con base en:
 Las exposiciones se llevarán a cabo de manera **presencial** con la computadora de cada equipo conectada al **invernadero físico**.
 
 > **Lugar:** Por definir
+> **Fecha y hora de entrega:** 11/05/2025 20:00 horas
+> El archivo `main.c` y el reporte (PDF) deberá ser entregado via Teams (cada alumno deberá subir su propio proyecto, sin importar que su compañero de equipo ya lo haya entregado)
+> **Es requisito para entrega que su código compile**
 
 
 ### Fechas y horarios de presentación:
@@ -304,12 +307,11 @@ Durante la presentación se deberá demostrar el funcionamiento completo del sis
 
 | Criterio                                      | Puntos |
 |-----------------------------------------------|--------|
-| Explica claramente el funcionamiento del proyecto | 25     |
-| Muestra correctamente el modo automático         | 20     |
-| Muestra correctamente el modo manual             | 15     |
+| Explica claramente y muestra correctamente el modo automático         | 25     |
+| Explica claramente y muestra correctamente el modo manual             | 5     |
 | Explica y demuestra el modo prueba               | 10     |
-| Explica y demuestra el modo macro                | 10     |
-| Explica cómo funciona el historial de comandos   | 10     |
+| Explica y demuestra el modo macro                | 25     |
+| Explica cómo funciona el historial de comandos   | 25     |
 | Presenta el código `main.c` correctamente        | 10     |
 | Total        | 100     |
 
