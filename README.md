@@ -321,7 +321,7 @@ Durante la presentación se deberá demostrar el funcionamiento completo del sis
 
 ## 📄 Archivos Entregables
 
-Este proyecto se realizará en **equipo**. Cada equipo deberá entregar los siguientes archivos:
+Este proyecto se realizará en **equipo**(máximo 2 personas). Cada equipo deberá entregar los siguientes archivos:
 
 1. `main.c` – Programa principal en C que implementa todos los modos y funcionalidades requeridas.
 2. `reporte.pdf` – Documento obligatorio para calificar. Debe incluir:
