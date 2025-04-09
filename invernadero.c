@@ -1,5 +1,6 @@
 #ifdef _WIN32
 #include <windows.h>
+#include <stdio.h>
 #else
 #include <fcntl.h>
 #include <termios.h>
