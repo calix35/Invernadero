@@ -324,6 +324,8 @@ Durante la presentación se deberá demostrar el funcionamiento completo del sis
 
 > 📌 **Nota importante:** El invernadero para pruebas físicas se encontrará en el Laboratorio de Inteligencia Artificial, en dicho laboratorio habrá una lista de asistencia en la cual deberán anotarse las personas que asistan a realizar pruebas físicas, esto servirá para valorar su esfuerzo en el proyecto.
 
+> **EN CASO DE QUE EL ALUMNO NO ALCANCE A PROMEDIAR UNA CALIFICACIÓN APROBATORIA EN EL CURSO, PODRÁ EVALUAR NUEVAMENTE EL PROYECTO EN EXTRAORDINARIO, LA FECHA DE ENTREGA Y PRESENTACIÓN SERÁN PUBLICADOS VIA TEAMS**
+
 
 ## 📄 Archivos Entregables
 
