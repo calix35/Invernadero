@@ -1,97 +1,107 @@
-#include "invernadero.h"
-#include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include "invernadero.h"
 
-static float tempSimulada = 25.0;
-static float humSimulada = 50.0;
-static int usarTempSimulada = 0;
-static int usarHumSimulada = 0;
+static float temperatura_actual = 25.0;
+static float humedad_actual = 50.0;
+static int simulacion_temp_activa = 0;
+static int simulacion_hum_activa = 0;
 
 int abrirPuertoSerie(const char* nombrePuerto) {
-    return 1;
+    srand(time(0));
+    return 1; // no hace nada en la versión simulada
 }
 
 void cerrarPuertoSerie() {
+    // No hace nada
 }
 
 void encenderBomba() {
-    printf("Simulación: Bomba encendida\n");
+    printf("[SIMULADO] Bomba ENCENDIDA\n");
 }
 
 void apagarBomba() {
-    printf("Simulación: Bomba apagada\n");
+    printf("[SIMULADO] Bomba APAGADA\n");
 }
 
 void encenderVentilador() {
-    printf("Simulación: Ventilador encendido\n");
+    printf("[SIMULADO] Ventilador ENCENDIDO\n");
 }
 
 void apagarVentilador() {
-    printf("Simulación: Ventilador apagado\n");
-}
-
-float leerTemperatura() {
-    float valor = usarTempSimulada ? tempSimulada : 26.5;
-    printf("Simulación: Temperatura leída: %.2f°C\n", valor);
-    return valor;
-}
-
-float leerHumedad() {
-    float valor = usarHumSimulada ? humSimulada : 55.5;
-    printf("Simulación: Humedad leída: %.2f%%\n", valor);
-    return valor;
+    printf("[SIMULADO] Ventilador APAGADO\n");
 }
 
 void encenderLed(const char* color) {
-    printf("Simulación: LED encendido en color %s\n", color);
+    printf("[SIMULADO] LED encendido con color: %s\n", color);
 }
 
 void apagarLed() {
-    printf("Simulación: LED apagado\n");
+    printf("[SIMULADO] LED apagado\n");
+}
+
+float generarVariacion(float valor, float min, float max, float delta) {
+    float cambio = ((rand() % ((int)(2 * delta * 10 + 1))) - delta * 10) / 10.0;
+    float nuevo = valor + cambio;
+    if (nuevo < min) nuevo = min;
+    if (nuevo > max) nuevo = max;
+    return nuevo;
+}
+
+float leerTemperatura() {
+    if (!simulacion_temp_activa) {
+        temperatura_actual = generarVariacion(temperatura_actual, 0, 50, 1.5);
+    }
+    return temperatura_actual;
+}
+
+float leerHumedad() {
+    if (!simulacion_hum_activa) {
+        humedad_actual = generarVariacion(humedad_actual, 10, 90, 2.0);
+    }
+    return humedad_actual;
 }
 
 void escribirTemperatura(float valor) {
-    tempSimulada = valor;
-    usarTempSimulada = 1;
-    printf("Simulación: Temperatura simulada establecida a %.2f°C\n", valor);
+    temperatura_actual = valor;
+    simulacion_temp_activa = 1;
 }
 
 void resetTemperatura() {
-    usarTempSimulada = 0;
-    printf("Simulación: Restablecida la lectura real de temperatura\n");
+    simulacion_temp_activa = 0;
 }
 
 void escribirHumedad(float valor) {
-    humSimulada = valor;
-    usarHumSimulada = 1;
-    printf("Simulación: Humedad simulada establecida a %.2f%%\n", valor);
+    humedad_actual = valor;
+    simulacion_hum_activa = 1;
 }
 
 void resetHumedad() {
-    usarHumSimulada = 0;
-    printf("Simulación: Restablecida la lectura real de humedad\n");
+    simulacion_hum_activa = 0;
 }
 
 void escribirLCD(int fila, int columna, const char* texto) {
-    printf("Simulación: LCD[%d][%d]: %s\n", fila, columna, texto);
+    printf("[LCD][%d,%d]: %s\n", fila, columna, texto);
 }
 
 void leerEstado(char* buffer, int len) {
-    snprintf(buffer, len, "Simulación: Bomba=ON, Ventilador=OFF");
+    snprintf(buffer, len, "[SIMULADO] Estado: Bomba y ventilador normal");
 }
 
 void estadoSistema(char* buffer, int len) {
-    snprintf(buffer, len, "Simulación completa: Temp=%.2f°C, Hum=%.2f%%", leerTemperatura(), leerHumedad());
+    snprintf(buffer, len, "[SIMULADO] Temp: %.2f, Hum: %.2f", temperatura_actual, humedad_actual);
 }
 
 void resetSistema() {
-    usarTempSimulada = 0;
-    usarHumSimulada = 0;
-    printf("Simulación: Sistema reiniciado\n");
+    printf("[SIMULADO] Sistema reiniciado\n");
+    simulacion_temp_activa = 0;
+    simulacion_hum_activa = 0;
 }
 
 void testComponentes() {
-    printf("Simulación: Ejecutando prueba de componentes...\n");
+    printf("[SIMULADO] Prueba de componentes ejecutada\n");
     encenderBomba();
     encenderVentilador();
     encenderLed("ROJO");
