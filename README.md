@@ -315,6 +315,7 @@ Durante la presentación se deberá demostrar el funcionamiento completo del sis
 
 > **El reporte en PDF es requisito obligatorio para calificar**, pero no tiene ponderación directa.  
 > Si no se entrega, no se podrá evaluar el proyecto.
+
 > 📌 **Nota importante:** El invernadero para pruebas físicas se encontrará en el Laboratorio de Inteligencia Artificial, en dicho laboratorio habrá una lista de asistencia en la cual deberán anotarse las personas que asistan a realizar pruebas físicas, esto servirá para valorar su esfuerzo en el proyecto.
 
 
