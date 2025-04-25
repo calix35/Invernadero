@@ -199,6 +199,43 @@ int main() {
     return 0;
 }
 ```
+---
+
+### Funciones adicionales de utilidad
+
+Dentro de la librería `invernadero` también se proporcionan dos funciones auxiliares para facilitar el flujo de los programas:
+
+- `int kbhit();`
+  - Verifica si el usuario ha presionado alguna tecla sin bloquear el programa.
+  - Muy útil para salir de ciclos sin detener la ejecución.
+
+- `void esperarUnSegundo();`
+  - Realiza una pausa de 1 segundo de manera multiplataforma (Windows/Linux/macOS).
+
+### Ejemplo de uso de `kbhit()` y `esperarUnSegundo()`:
+
+```c
+#include "invernadero.h"
+#include <stdio.h>
+
+int main() {
+    abrirPuertoSerie("COM3");
+
+    printf("Presiona cualquier tecla para salir...\n");
+    
+    while (!kbhit()) {
+        float temp = leerTemperatura();
+        float hum = leerHumedad();
+
+        printf("Temp: %.2f °C | Humedad: %.2f %%\n", temp, hum);
+        esperarUnSegundo(); // Pausa de 1 segundo entre lecturas
+    }
+
+    getchar(); // Limpiar el buffer
+    cerrarPuertoSerie();
+    return 0;
+}
+```
 
 ---
 

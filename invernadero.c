@@ -1,15 +1,26 @@
 #ifdef _WIN32
 #include <windows.h>
 #include <stdio.h>
+#include <stdlib.h>
 #else
 #include <fcntl.h>
 #include <termios.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #endif
 
 #include "invernadero.h"
+
+#ifdef _WIN32
+#include <conio.h>
+#else
+#include <termios.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/select.h>
+#endif
 
 #ifdef _WIN32
 static HANDLE hSerial = INVALID_HANDLE_VALUE;
@@ -67,81 +78,138 @@ void enviarComando(const char* comando) {
 }
 
 void leerRespuesta(char* buffer, int len) {
+    memset(buffer, 0, len);
+
+    int index = 0;
 #ifdef _WIN32
     DWORD bytesRead;
-    ReadFile(hSerial, buffer, len - 1, &bytesRead, NULL);
-    buffer[bytesRead] = '\0';
+    char c;
+    while (index < len - 1) {
+        ReadFile(hSerial, &c, 1, &bytesRead, NULL);
+        if (bytesRead > 0) {
+            buffer[index++] = c;
+            if (c == '\n') break; // Terminó la línea
+        } else {
+            Sleep(10); // Esperar si no hay datos
+        }
+    }
 #else
-    int n = read(serialPort, buffer, len - 1);
-    buffer[n] = '\0';
+    char c;
+    int n;
+    while (index < len - 1) {
+        n = read(serialPort, &c, 1);
+        if (n > 0) {
+            buffer[index++] = c;
+            if (c == '\n') break; // Terminó la línea
+        } else {
+            usleep(10000); // Esperar 10 ms
+        }
+    }
 #endif
+    buffer[index] = '\0'; // Finalizar la cadena
 }
 
-void encenderBomba() { enviarComando("ENCENDER_BOMBA\n"); }
-void apagarBomba()   { enviarComando("APAGAR_BOMBA\n"); }
-void encenderVentilador() { enviarComando("ENCENDER_VENTILADOR\n"); }
-void apagarVentilador()   { enviarComando("APAGAR_VENTILADOR\n"); }
+void encenderBomba() { enviarComando("BOMBA ON\n"); }
+void apagarBomba()   { enviarComando("BOMBA OFF\n"); }
+void encenderVentilador() { enviarComando("FAN ON\n"); }
+void apagarVentilador()   { enviarComando("FAN OFF\n"); }
 void encenderLed(const char* color) {
     char cmd[64];
-    snprintf(cmd, sizeof(cmd), "ENCENDER_LED %s\n", color);
+    snprintf(cmd, sizeof(cmd), "LED %s\n", color);
     enviarComando(cmd);
 }
-void apagarLed() { enviarComando("APAGAR_LED\n"); }
+void apagarLed() { enviarComando("LED OFF\n"); }
 
 float leerTemperatura() {
-    enviarComando("LEER_TEMPERATURA\n");
+    enviarComando("GET TEMP\n");
     char buffer[64];
     leerRespuesta(buffer, sizeof(buffer));
-    return atof(buffer);
+    return strtod(buffer, NULL);
 }
 
 float leerHumedad() {
-    enviarComando("LEER_HUMEDAD\n");
+    enviarComando("GET HUM\n");
     char buffer[64];
     leerRespuesta(buffer, sizeof(buffer));
-    return atof(buffer);
+    return strtod(buffer, NULL);
 }
 
 void escribirTemperatura(float valor) {
     char cmd[64];
-    snprintf(cmd, sizeof(cmd), "ESCRIBIR_TEMP %.2f\n", valor);
+    snprintf(cmd, sizeof(cmd), "SET TEMP %.2f\n", valor);
     enviarComando(cmd);
 }
 
 void resetTemperatura() {
-    enviarComando("RESET_TEMP\n");
+    enviarComando("RESET TEMP\n");
 }
 
 void escribirHumedad(float valor) {
     char cmd[64];
-    snprintf(cmd, sizeof(cmd), "ESCRIBIR_HUM %.2f\n", valor);
+    snprintf(cmd, sizeof(cmd), "SET HUM %.2f\n", valor);
     enviarComando(cmd);
 }
 
 void resetHumedad() {
-    enviarComando("RESET_HUM\n");
+    enviarComando("RESET HUM\n");
 }
 
 void escribirLCD(int fila, int columna, const char* texto) {
     char cmd[128];
-    snprintf(cmd, sizeof(cmd), "ESCRIBIR_LCD %d %d %s\n", fila, columna, texto);
+    snprintf(cmd, sizeof(cmd), "LCD %d %d %s\n", fila, columna, texto);
     enviarComando(cmd);
 }
 
 void leerEstado(char* buffer, int len) {
-    enviarComando("LEER_ESTADO\n");
+    enviarComando("GET STATE\n");
     leerRespuesta(buffer, len);
 }
 
 void estadoSistema(char* buffer, int len) {
-    enviarComando("ESTADO_SISTEMA\n");
+    enviarComando("GET FULL\n");
     leerRespuesta(buffer, len);
 }
 
 void resetSistema() {
-    enviarComando("RESET_SISTEMA\n");
+    enviarComando("RESET ALL\n");
 }
 
 void testComponentes() {
-    enviarComando("TEST_COMPONENTES\n");
+    enviarComando("TEST\n");
+}
+
+int kbhit(void) {
+    #ifdef _WIN32
+        return _kbhit();
+    #else
+        struct termios oldt, newt;
+        int oldf;
+        struct timeval tv = {0, 0};
+    
+        tcgetattr(STDIN_FILENO, &oldt);
+        newt = oldt;
+        newt.c_lflag &= ~(ICANON | ECHO); // sin buffer y sin eco
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    
+        oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+        fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+    
+        fd_set set;
+        FD_ZERO(&set);
+        FD_SET(STDIN_FILENO, &set);
+        int rv = select(STDIN_FILENO + 1, &set, NULL, NULL, &tv);
+    
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+        fcntl(STDIN_FILENO, F_SETFL, oldf);
+    
+        return rv > 0;
+    #endif
+}
+
+void esperarUnSegundo(void) {
+    #ifdef _WIN32
+        Sleep(1000); // 1000 ms = 1 segundo
+    #else
+        usleep(1000000); // 1,000,000 microsegundos = 1 segundo
+    #endif
 }

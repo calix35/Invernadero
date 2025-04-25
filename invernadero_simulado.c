@@ -4,6 +4,15 @@
 #include <time.h>
 #include "invernadero.h"
 
+#ifdef _WIN32
+#include <conio.h>
+#else
+#include <termios.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/select.h>
+#endif
+
 static float temperatura_actual = 25.0;
 static float humedad_actual = 50.0;
 static int simulacion_temp_activa = 0;
@@ -106,4 +115,52 @@ void testComponentes() {
     encenderVentilador();
     encenderLed("ROJO");
     escribirLCD(0, 0, "Test OK");
+}
+
+/**
+ * @brief Revisa si se ha presionado una tecla.
+ *
+ * Funciona tanto en Windows como en Linux/MacOS.
+ *
+ * @return 1 si hay tecla presionada, 0 si no.
+ */
+int kbhit(void) {
+    #ifdef _WIN32
+        return _kbhit();
+    #else
+        struct termios oldt, newt;
+        int oldf;
+        struct timeval tv = {0, 0};
+    
+        tcgetattr(STDIN_FILENO, &oldt);
+        newt = oldt;
+        newt.c_lflag &= ~(ICANON | ECHO); // sin buffer y sin eco
+        tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    
+        oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+        fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+    
+        fd_set set;
+        FD_ZERO(&set);
+        FD_SET(STDIN_FILENO, &set);
+        int rv = select(STDIN_FILENO + 1, &set, NULL, NULL, &tv);
+    
+        tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+        fcntl(STDIN_FILENO, F_SETFL, oldf);
+    
+        return rv > 0;
+    #endif
+}
+
+/**
+ * @brief Espera un segundo de manera portable.
+ *
+ * Usa Sleep() en Windows y usleep() en Linux/Mac.
+ */
+void esperarUnSegundo(void) {
+    #ifdef _WIN32
+        Sleep(1000); // 1000 ms = 1 segundo
+    #else
+        usleep(1000000); // 1,000,000 microsegundos = 1 segundo
+    #endif
 }

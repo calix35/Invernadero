@@ -6,5 +6,6 @@ var searchData=
   ['escribirhumedad_3',['escribirHumedad',['../invernadero_8h.html#ac97934bae984a0884ebbeee61e35ed6a',1,'invernadero.h']]],
   ['escribirlcd_4',['escribirLCD',['../invernadero_8h.html#af707cb9e2d3c458f31c28504590c0d81',1,'invernadero.h']]],
   ['escribirtemperatura_5',['escribirTemperatura',['../invernadero_8h.html#a1e3320547ac865eebbcf1d03c8e27772',1,'invernadero.h']]],
-  ['estadosistema_6',['estadoSistema',['../invernadero_8h.html#afe6dfa9fff6d7961c3cd8960086adc01',1,'invernadero.h']]]
+  ['esperarunsegundo_6',['esperarUnSegundo',['../invernadero_8h.html#aad4944c698769a39a1cf5d137fb9f56d',1,'invernadero.h']]],
+  ['estadosistema_7',['estadoSistema',['../invernadero_8h.html#afe6dfa9fff6d7961c3cd8960086adc01',1,'invernadero.h']]]
 ];

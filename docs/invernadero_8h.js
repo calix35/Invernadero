@@ -1,6 +1,5 @@
 var invernadero_8h =
 [
-    [ "INVERNADERO_H", "invernadero_8h.html#a89b58738709a627850af041c2f9576b7", null ],
     [ "abrirPuertoSerie", "invernadero_8h.html#a2e24e46ac9d8d05fc3c590a8a0da1240", null ],
     [ "apagarBomba", "invernadero_8h.html#ace7d2cf426da8b2b7684f8873101b2ba", null ],
     [ "apagarLed", "invernadero_8h.html#a6b6334f39a26583e56de719ba9440e30", null ],
@@ -12,7 +11,9 @@ var invernadero_8h =
     [ "escribirHumedad", "invernadero_8h.html#ac97934bae984a0884ebbeee61e35ed6a", null ],
     [ "escribirLCD", "invernadero_8h.html#af707cb9e2d3c458f31c28504590c0d81", null ],
     [ "escribirTemperatura", "invernadero_8h.html#a1e3320547ac865eebbcf1d03c8e27772", null ],
+    [ "esperarUnSegundo", "invernadero_8h.html#aad4944c698769a39a1cf5d137fb9f56d", null ],
     [ "estadoSistema", "invernadero_8h.html#afe6dfa9fff6d7961c3cd8960086adc01", null ],
+    [ "kbhit", "invernadero_8h.html#a97e9b1fe8d4c010474637a654aad6566", null ],
     [ "leerEstado", "invernadero_8h.html#a47e19f63241abe42e5266f1ee9dfe41d", null ],
     [ "leerHumedad", "invernadero_8h.html#a7db7e04c1561e005234cdbf70fceee13", null ],
     [ "leerTemperatura", "invernadero_8h.html#a0949a5b5ed64a01ddb501274280651bd", null ],

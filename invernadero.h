@@ -122,6 +122,22 @@ void resetSistema();
  */
 void testComponentes();
 
+/**
+ * @brief Revisa si se ha presionado una tecla.
+ *
+ * Funciona tanto en Windows como en Linux/MacOS.
+ *
+ * @return 1 si hay tecla presionada, 0 si no.
+ */
+int kbhit(void);
+
+/**
+ * @brief Espera un segundo de manera portable.
+ *
+ * Usa Sleep() en Windows y usleep() en Linux/Mac.
+ */
+void esperarUnSegundo(void);
+
 #ifdef __cplusplus
 }
 #endif

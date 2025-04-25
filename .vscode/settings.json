@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "invernadero.h": "c"
+        "invernadero.h": "c",
+        "stdio.h": "c"
     }
 }
