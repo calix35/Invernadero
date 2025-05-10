@@ -324,11 +324,11 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 
 | Fecha       | Horario         | Integrantes del equipo                |
 |-------------|-----------------|----------------------------------------|
-| DD/MM/AAAA  | HH:MM - HH:MM   | (Medrano Lugo Jesús Eduardo, De la Cruz Maldonado Saúl Alberto)              |
+| DD/MM/AAAA  | HH:MM - HH:MM   | (Hernández Cabrera Luis Francisco, Pérez Castro Derek)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez Vigueras Uriel, Alvarado Camarillo Uriel)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez de la Fuente Adrián)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Cortina Solis Raúl)              |
-| DD/MM/AAAA  | HH:MM - HH:MM   | (Hernández Cabrera Luis Francisco, Pérez Castro Derek)              |
+| DD/MM/AAAA  | HH:MM - HH:MM   | (Medrano Lugo Jesús Eduardo, De la Cruz Maldonado Saúl Alberto)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Ramírez Esparza Hannia Isamar)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Carrera Gómez Ángel Alejandro)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Santoy Hernández Tomás Ismael)              |
