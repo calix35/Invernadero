@@ -341,7 +341,7 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Alonzo Espinoza Ángel Humberto)              |
 
 
-(La tabla será actualizada el día 11/05/2025 con los nombres de los alumnos y fechas exactas de presentación, **es responsabilidad del alumno estar pendiente de la
+(Los tiempos son aproximados, **es responsabilidad del alumno estar pendiente de la
 fecha y hora que le corresponde**)
 
 
