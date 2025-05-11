@@ -326,8 +326,8 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 |-------------|-----------------|----------------------------------------|
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Hernández Cabrera Luis Francisco, Pérez Castro Derek)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Urbina Méndez Oliver Jahir)              |
-| DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez de la Fuente Adrián)              |
-| DD/MM/AAAA  | HH:MM - HH:MM   | (Cortina Solis Raúl)              |
+| DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez Vigueras Uriel, Alvarado Camarillo Uriel)              |
+| DD/MM/AAAA  | HH:MM - HH:MM   | (Ávalos Martínez Erick Guadalupe)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Medrano Lugo Jesús Eduardo, De la Cruz Maldonado Saúl Alberto)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Ramírez Esparza Hannia Isamar)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Carrera Gómez Ángel Alejandro)              |
@@ -337,8 +337,8 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Medrano Gutiérrez Cristian Ronaldo)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Mejía Martínez Frida Sofía)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Ladrón de Guevara Yzaguirre Jesús Gael, Amaro Cancino Daniel Alejandro)              |
-| DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez Vigueras Uriel, Alvarado Camarillo Uriel)              |
-| DD/MM/AAAA  | HH:MM - HH:MM   | (Ávalos Martínez Erick Guadalupe)              |
+| DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez de la Fuente Adrián)              |
+| DD/MM/AAAA  | HH:MM - HH:MM   | (Cortina Solis Raúl)              |
 
 
 (La tabla será actualizada el día 11/05/2025 con los nombres de los alumnos y fechas exactas de presentación, **es responsabilidad del alumno estar pendiente de la
