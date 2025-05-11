@@ -324,18 +324,18 @@ Las exposiciones se llevarán a cabo de manera **presencial** con la computadora
 
 | Fecha       | Horario         | Integrantes del equipo                |
 |-------------|-----------------|----------------------------------------|
-| 13/05/2025  | 08:00 - 08:20   | (Hernández Cabrera Luis Francisco, Pérez Castro Derek)              |
-| 13/05/2025  | 08:20 - 08:30   | (Urbina Méndez Oliver Jahir)              |
-| 13/05/2025  | 08:30 - 08:50   | (Álvarez Vigueras Uriel, Alvarado Camarillo Uriel)              |
-| 13/05/2025  | 08:50 - 09:00   | (Ávalos Martínez Erick Guadalupe)              |
-| 13/05/2025  | 09:00 - 09:20   | (Medrano Lugo Jesús Eduardo, De la Cruz Maldonado Saúl Alberto)              |
-| 13/05/2025  | 09:20 - 09:40   | (Ladrón de Guevara Yzaguirre Jesús Gael, Amaro Cancino Daniel Alejandro)              |
-| 13/05/2025  | 09:40 - 10:00   | (Camacho Baltazar Héctor Mario, Peña González Lucio Almir)              |
-| 15/05/2025  | 08:00 - 08:10   | (Carrera Gómez Ángel Alejandro)              |
-| 15/05/2025  | 08:10 - 08:20   | (Cortina Solis Raúl)              |
-| 15/05/2025  | 08:20 - 08:30   | (Medrano Gutiérrez Cristian Ronaldo)              |
-| 15/05/2025  | 08:30 - 08:40   | (Mejía Martínez Frida Sofía)              |
-| 15/05/2025  | 08:40 - 08:50   | (Ramírez Esparza Hannia Isamar)              |
+| 12/05/2025  | 08:00 - 08:20   | (Hernández Cabrera Luis Francisco, Pérez Castro Derek)              |
+| 12/05/2025  | 08:20 - 08:30   | (Urbina Méndez Oliver Jahir)              |
+| 12/05/2025  | 08:30 - 08:50   | (Álvarez Vigueras Uriel, Alvarado Camarillo Uriel)              |
+| 12/05/2025  | 08:50 - 09:00   | (Ávalos Martínez Erick Guadalupe)              |
+| 12/05/2025  | 09:00 - 09:20   | (Medrano Lugo Jesús Eduardo, De la Cruz Maldonado Saúl Alberto)              |
+| 12/05/2025  | 09:20 - 09:40   | (Ladrón de Guevara Yzaguirre Jesús Gael, Amaro Cancino Daniel Alejandro)              |
+| 12/05/2025  | 09:40 - 10:00   | (Camacho Baltazar Héctor Mario, Peña González Lucio Almir)              |
+| 13/05/2025  | 08:00 - 08:10   | (Carrera Gómez Ángel Alejandro)              |
+| 13/05/2025  | 08:10 - 08:20   | (Cortina Solis Raúl)              |
+| 13/05/2025  | 08:20 - 08:30   | (Medrano Gutiérrez Cristian Ronaldo)              |
+| 13/05/2025  | 08:30 - 08:40   | (Mejía Martínez Frida Sofía)              |
+| 13/05/2025  | 08:40 - 08:50   | (Ramírez Esparza Hannia Isamar)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Santoy Hernández Tomás Ismael)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Álvarez de la Fuente Adrián)              |
 | DD/MM/AAAA  | HH:MM - HH:MM   | (Alonzo Espinoza Ángel Humberto)              |
